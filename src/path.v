@@ -70,7 +70,7 @@ pub fn extname(p string) string {
 	}
 }
 
-[direct_array_access]
+@[direct_array_access]
 fn last_name_end(p string) int {
 	mut end := p.len
 	for end > 1 {
@@ -83,7 +83,7 @@ fn last_name_end(p string) int {
 	return end
 }
 
-[direct_array_access]
+@[direct_array_access]
 fn last_sep(s string, end int) int {
 	for i := end - 1; i >= 0; i-- {
 		if s[i] == wpath.sep {
