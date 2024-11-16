@@ -13,36 +13,36 @@ fn test_name() {
 }
 
 fn test_slash() {
-	out := dirname('${wpath.slash}')
-	assert out == '${wpath.slash}'
+	out := dirname('${slash}')
+	assert out == '${slash}'
 }
 
 fn test_two_slashes() {
-	out := dirname('${wpath.slash}${wpath.slash}')
-	assert out == '${wpath.slash}'
+	out := dirname('${slash}${slash}')
+	assert out == '${slash}'
 }
 
 fn test_name_ends_with_slash() {
-	out := dirname('a${wpath.slash}')
+	out := dirname('a${slash}')
 	assert out == '.'
 }
 
 fn test_name_ends_with_two_slashes() {
-	out := dirname('a${wpath.slash}${wpath.slash}')
+	out := dirname('a${slash}${slash}')
 	assert out == '.'
 }
 
 fn test_name_starts_with_slash() {
-	out := dirname('${wpath.slash}a')
-	assert out == '${wpath.slash}'
+	out := dirname('${slash}a')
+	assert out == '${slash}'
 }
 
 fn test_name_starts_with_two_slashes() {
-	out := dirname('${wpath.slash}${wpath.slash}a')
-	assert out == '${wpath.slash}'
+	out := dirname('${slash}${slash}a')
+	assert out == '${slash}'
 }
 
 fn test_names_with_slash() {
-	out := dirname('a${wpath.slash}b')
+	out := dirname('a${slash}b')
 	assert out == 'a'
 }
